@@ -1,6 +1,6 @@
 
 ## Описание
-Репозиторий содержит дополнительные отчеты для плагина ActualTime для GLPI (ссылка на репозиторий плагина https://github.com/ticgal/actualtime). \
+Репозиторий содержит дополнительные отчеты для плагина ActualTime для GLPI (ссылка на  плагин https://tic.gal/en/project/actualtime-plugin-glpi/). \
 Во всех отчетах считается время выполнения в задачах, у которых поставлена галочка (т.е. она выполнена).\
 У каждой задачи есть учтенное время выполнения. Оно бывает двух видов: ручное и автоматическое (=таймером).\
 В каждом отчете выводится информация об учтенном времени:\
@@ -28,6 +28,7 @@
 
 В отчетах учитывается выбранная организация (Entity) и тип выбора (со структурой или без).
 ## Установка
+0. Проверьте, что у вас установлены и включены плагины actualtime (https://tic.gal/en/project/actualtime-plugin-glpi/) и reports (https://forge.glpi-project.org/projects/reports)
 1. Скачать последний релиз (доступен по ccылке https://github.com/ershov-a/actualtimeExtraReports/releases/latest).
 2. Распаковать архив.
 3. Переместить 4 папки (allTechTime, allTechTimeTask, techTime, techTimeTask) по пути `КОРНЕВАЯ_ПАПКА_GLPI/plugins/actualtime/report`.
