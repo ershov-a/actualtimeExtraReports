@@ -89,8 +89,7 @@ FROM glpi_plugin_actualtime_tasks
    RIGHT JOIN glpi_tickettasks ON glpi_tickettasks.id = glpi_plugin_actualtime_tasks.tasks_id
    INNER JOIN glpi_tickets ON glpi_tickets.id = glpi_tickettasks.tickets_id
    INNER JOIN glpi_users ON glpi_users.id = glpi_tickettasks.users_id_tech
-WHERE state = 2
-AND (glpi_tickets.entities_id
+WHERE (glpi_tickets.entities_id
 IN (select  id
 from    (select * from glpi_entities
         order by entities_id, id) glpi_entities_sorted,
@@ -114,8 +113,7 @@ FROM glpi_plugin_actualtime_tasks
    RIGHT JOIN glpi_tickettasks ON glpi_tickettasks.id = glpi_plugin_actualtime_tasks.tasks_id
    INNER JOIN glpi_tickets ON glpi_tickets.id = glpi_tickettasks.tickets_id
    INNER JOIN glpi_users ON glpi_users.id = glpi_tickettasks.users_id_tech
-WHERE state = 2
-AND glpi_tickets.entities_id = " . $_SESSION['glpiactive_entity']  . "
+WHERE glpi_tickets.entities_id = " . $_SESSION['glpiactive_entity']  . "
 " . " ";
 }
 
